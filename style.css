@@ -1,0 +1,13 @@
+.jumbotron {
+  padding-top: 5rem;
+  background-image: url("img/jumbotron/j1.jpg");
+  background-size: cover;
+}
+
+#projects {
+  background-color: #dbfaf8;
+}
+
+section {
+  padding-top: 5rem;
+}
