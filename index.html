@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -45,7 +48,7 @@
     <section class="jumbotron text-center">
       <img src="img/Profilefoto.jpg" alt="Rudy Santoso" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4 text-light">Rudy Santoso</h1>
-      <p class="lead text-light">Information Technology | Tech Support</p>
+      <p class="lead text-light">|</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -65,11 +68,11 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5">
-          <div class="col-md-5 mb-3">
+          <div class="col-md-5 mb-3" data-aos-offset="300" data-aos="fade-right" data-aos-duration="1000">
             I am an experienced worker as Desktop Engineer and Docucare. With my experience I can become a very focused and detail oriented technician who is able to analyze, diagnose, and solved various problems accurately using standard
             equipment and comprehensive checklist. My objective career is to become an expert in the IT industry on any field.
           </div>
-          <div class="col-md-5 mb-3">
+          <div class="col-md-5 mb-3" data-aos-offset="300" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50">
             <h5>Programming Skills</h5>
             <ul>
               <li>Programming Tools (Dev C++, SublimeText, VSC).</li>
@@ -102,7 +105,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos-offset="400" data-aos="zoom-in-up" data-aos-duration="1000">
               <img src="img/projects/1.jpg" class="card-img-top" alt="Project1" />
               <div class="card-body">
                 <h5 class="card-title">Thesis Project</h5>
@@ -112,7 +115,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos-offset="400" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">
               <img src="img/projects/2.jpg" class="card-img-top" alt="Project2" />
               <div class="card-body">
                 <h5 class="card-title">IT-Work</h5>
@@ -184,6 +187,27 @@
     </footer>
     <!-- Akhir Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <!-- Script GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2.5, delay: 1.3, text: "Information Technology | Tech Support" });
+      gsap.from(".jumbotron img", { duration: 1.5, y: -100, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: -100, opacity: 0 });
+      gsap.from(".display-4", { duration: 1.5, x: -30, opacity: 0 });
+      gsap.from(".lead", { duration: 2, x: 30, opacity: 0 });
+    </script>
 
     <!-- Script Contact -->
     <script>
